@@ -1,0 +1,43 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Gráfico de Barras com Imagens</title>
+</head>
+
+
+<body>
+<form name="formi">
+
+<h1>Um gráfico de barras usando imagens</h1><br>
+
+	Informe a altura das barras:
+	<input type="text" name="barra1">
+	<input type="text" name="barra2">
+	<input type="text" name="barra3">
+	<input type="text" name="barra4">
+	<input type="text" name="barra5">
+
+	<br><br>
+
+	Informe a largura das barras (em pixels):
+	<input type="text" name="barra6">
+
+	<br><br>
+
+	<input type="button" onclick="desenhar()" id="barrinhas" value="Draw me like one of your french girls">
+
+	<br><br>
+
+	<img name="ba1" src="red.gif" >
+	<img name="ba2" src="red.gif" >
+	<img name="ba3" src="red.gif" >
+	<img name="ba4" src="red.gif" >
+	<img name="ba5" src="red.gif" >
+
+<script type="text/javascript" src="d.js"></script>
+</form>		
+ 
+</body>
+
+</html>
