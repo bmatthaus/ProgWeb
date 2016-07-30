@@ -1,0 +1,303 @@
+<html>
+
+<head>
+
+	<meta charset='UTF-8'>
+	<title>Jogo Gomoku</title>
+	
+</head>
+
+
+<body background="bgimage.jpg">
+
+	<h1>Jogo Gomoku</h1>
+	<input type="button" onClick="history.go(0)" value="Iniciar"><br>
+	
+	<p>
+	O Gomoku, também conhecido como Gobang, é um jogo de tabuleiro estratégico tradicionalmente jogado com peças de Go (peças negras e brancas) em um tabuleiro de Go ligeiramente modificado (15x15 interseções). No entanto, ao contrario deste, uma vez que as peças são colocadas não podem ser movidas ou retiradas do tabuleiro. No inicio do jogo, as negras começam, e os jogadores alternam na colocação de uma pedra da sua cor em uma interseção vazia. O vencedor é o primeiro jogador a obter uma linha ininterrupta de cinco pedras na horizontal, vertical ou diagonal. 		
+	</p>
+
+	<h3>O jogador da vez é:  <img id=jogvez src="1.gif" alt="jogvez"/> </h3>
+
+	<table>
+	
+	<tr>
+		<td><img id="e0101" src="0.gif" alt="e0101" onclick="play(this.id,1,1)"/></td>
+		<td><img id="e0102" src="0.gif" alt="e0102" onclick="play(this.id,1,2)"/></td>
+		<td><img id="e0103" src="0.gif" alt="e0103" onclick="play(this.id,1,3)"/></td>
+		<td><img id="e0104" src="0.gif" alt="e0104" onclick="play(this.id,1,4)"/></td>
+		<td><img id="e0105" src="0.gif" alt="e0105" onclick="play(this.id,1,5)"/></td>
+		<td><img id="e0106" src="0.gif" alt="e0106" onclick="play(this.id,1,6)"/></td>
+		<td><img id="e0107" src="0.gif" alt="e0107" onclick="play(this.id,1,7)"/></td>
+		<td><img id="e0108" src="0.gif" alt="e0108" onclick="play(this.id,1,8)"/></td>
+		<td><img id="e0109" src="0.gif" alt="e0109" onclick="play(this.id,1,9)"/></td>
+		<td><img id="e0110" src="0.gif" alt="e0110" onclick="play(this.id,1,10)"/></td>
+		<td><img id="e0111" src="0.gif" alt="e0111" onclick="play(this.id,1,11)"/></td>
+		<td><img id="e0112" src="0.gif" alt="e0112" onclick="play(this.id,1,12)"/></td>
+		<td><img id="e0113" src="0.gif" alt="e0113" onclick="play(this.id,1,13)"/></td>
+		<td><img id="e0114" src="0.gif" alt="e0114" onclick="play(this.id,1,14)"/></td>
+		<td><img id="e0115" src="0.gif" alt="e0115" onclick="play(this.id,1,15)"/></td>
+	</tr>
+	<tr>
+		<td><img id="e0201" src="0.gif" alt="e0201" onclick="play(this.id,2,1)"/></td>
+		<td><img id="e0202" src="0.gif" alt="e0202" onclick="play(this.id,2,2)"/></td>
+		<td><img id="e0203" src="0.gif" alt="e0203" onclick="play(this.id,2,3)"/></td>
+		<td><img id="e0204" src="0.gif" alt="e0204" onclick="play(this.id,2,4)"/></td>
+		<td><img id="e0205" src="0.gif" alt="e0205" onclick="play(this.id,2,5)"/></td>
+		<td><img id="e0206" src="0.gif" alt="e0206" onclick="play(this.id,2,6)"/></td>
+		<td><img id="e0207" src="0.gif" alt="e0207" onclick="play(this.id,2,7)"/></td>
+		<td><img id="e0208" src="0.gif" alt="e0208" onclick="play(this.id,2,8)"/></td>
+		<td><img id="e0209" src="0.gif" alt="e0209" onclick="play(this.id,2,9)"/></td>
+		<td><img id="e0210" src="0.gif" alt="e0210" onclick="play(this.id,2,10)"/></td>
+		<td><img id="e0211" src="0.gif" alt="e0211" onclick="play(this.id,2,11)"/></td>
+		<td><img id="e0212" src="0.gif" alt="e0212" onclick="play(this.id,2,12)"/></td>
+		<td><img id="e0213" src="0.gif" alt="e0213" onclick="play(this.id,2,13)"/></td>
+		<td><img id="e0214" src="0.gif" alt="e0214" onclick="play(this.id,2,14)"/></td>
+		<td><img id="e0215" src="0.gif" alt="e0215" onclick="play(this.id,2,15)"/></td>
+	</tr>	
+	<tr>
+		<td><img id="e0301" src="0.gif" alt="e0301" onclick="play(this.id,3,1)"/></td>
+		<td><img id="e0302" src="0.gif" alt="e0302" onclick="play(this.id,3,2)"/></td>
+		<td><img id="e0303" src="0.gif" alt="e0303" onclick="play(this.id,3,3)"/></td>
+		<td><img id="e0304" src="0.gif" alt="e0304" onclick="play(this.id,3,4)"/></td>
+		<td><img id="e0305" src="0.gif" alt="e0305" onclick="play(this.id,3,5)"/></td>
+		<td><img id="e0306" src="0.gif" alt="e0306" onclick="play(this.id,3,6)"/></td>
+		<td><img id="e0307" src="0.gif" alt="e0307" onclick="play(this.id,3,7)"/></td>
+		<td><img id="e0308" src="0.gif" alt="e0308" onclick="play(this.id,3,8)"/></td>
+		<td><img id="e0309" src="0.gif" alt="e0309" onclick="play(this.id,3,9)"/></td>
+		<td><img id="e0310" src="0.gif" alt="e0310" onclick="play(this.id,3,10)"/></td>
+		<td><img id="e0311" src="0.gif" alt="e0311" onclick="play(this.id,3,11)"/></td>
+		<td><img id="e0312" src="0.gif" alt="e0312" onclick="play(this.id,3,12)"/></td>
+		<td><img id="e0313" src="0.gif" alt="e0313" onclick="play(this.id,3,13)"/></td>
+		<td><img id="e0314" src="0.gif" alt="e0314" onclick="play(this.id,3,14)"/></td>
+		<td><img id="e0315" src="0.gif" alt="e0315" onclick="play(this.id,3,15)"/></td>
+	</tr>	
+	<tr>
+		<td><img id="e0401" src="0.gif" alt="e0401" onclick="play(this.id,4,1)"/></td>
+		<td><img id="e0402" src="0.gif" alt="e0402" onclick="play(this.id,4,2)"/></td>
+		<td><img id="e0403" src="0.gif" alt="e0403" onclick="play(this.id,4,3)"/></td>
+		<td><img id="e0404" src="0.gif" alt="e0404" onclick="play(this.id,4,4)"/></td>
+		<td><img id="e0405" src="0.gif" alt="e0405" onclick="play(this.id,4,5)"/></td>
+		<td><img id="e0406" src="0.gif" alt="e0406" onclick="play(this.id,4,6)"/></td>
+		<td><img id="e0407" src="0.gif" alt="e0407" onclick="play(this.id,4,7)"/></td>
+		<td><img id="e0408" src="0.gif" alt="e0408" onclick="play(this.id,4,8)"/></td>
+		<td><img id="e0409" src="0.gif" alt="e0409" onclick="play(this.id,4,9)"/></td>
+		<td><img id="e0410" src="0.gif" alt="e0410" onclick="play(this.id,4,10)"/></td>
+		<td><img id="e0411" src="0.gif" alt="e0411" onclick="play(this.id,4,11)"/></td>
+		<td><img id="e0412" src="0.gif" alt="e0412" onclick="play(this.id,4,12)"/></td>
+		<td><img id="e0413" src="0.gif" alt="e0413" onclick="play(this.id,4,13)"/></td>
+		<td><img id="e0414" src="0.gif" alt="e0414" onclick="play(this.id,4,14)"/></td>
+		<td><img id="e0415" src="0.gif" alt="e0415" onclick="play(this.id,4,15)"/></td>
+	</tr>	
+	<tr>
+		<td><img id="e0501" src="0.gif" alt="e0501" onclick="play(this.id,5,1)"/></td>
+		<td><img id="e0502" src="0.gif" alt="e0502" onclick="play(this.id,5,2)"/></td>
+		<td><img id="e0503" src="0.gif" alt="e0503" onclick="play(this.id,5,3)"/></td>
+		<td><img id="e0504" src="0.gif" alt="e0504" onclick="play(this.id,5,4)"/></td>
+		<td><img id="e0505" src="0.gif" alt="e0505" onclick="play(this.id,5,5)"/></td>
+		<td><img id="e0506" src="0.gif" alt="e0506" onclick="play(this.id,5,6)"/></td>
+		<td><img id="e0507" src="0.gif" alt="e0507" onclick="play(this.id,5,7)"/></td>
+		<td><img id="e0508" src="0.gif" alt="e0508" onclick="play(this.id,5,8)"/></td>
+		<td><img id="e0509" src="0.gif" alt="e0509" onclick="play(this.id,5,9)"/></td>
+		<td><img id="e0510" src="0.gif" alt="e0510" onclick="play(this.id,5,10)"/></td>
+		<td><img id="e0511" src="0.gif" alt="e0511" onclick="play(this.id,5,11)"/></td>
+		<td><img id="e0512" src="0.gif" alt="e0512" onclick="play(this.id,5,12)"/></td>
+		<td><img id="e0513" src="0.gif" alt="e0513" onclick="play(this.id,5,13)"/></td>
+		<td><img id="e0514" src="0.gif" alt="e0514" onclick="play(this.id,5,14)"/></td>
+		<td><img id="e0515" src="0.gif" alt="e0515" onclick="play(this.id,5,15)"/></td>
+	</tr>	
+	<tr>
+		<td><img id="e0601" src="0.gif" alt="e0601" onclick="play(this.id,6,1)"/></td>
+		<td><img id="e0602" src="0.gif" alt="e0602" onclick="play(this.id,6,2)"/></td>
+		<td><img id="e0603" src="0.gif" alt="e0603" onclick="play(this.id,6,3)"/></td>
+		<td><img id="e0604" src="0.gif" alt="e0604" onclick="play(this.id,6,4)"/></td>
+		<td><img id="e0605" src="0.gif" alt="e0605" onclick="play(this.id,6,5)"/></td>
+		<td><img id="e0606" src="0.gif" alt="e0606" onclick="play(this.id,6,6)"/></td>
+		<td><img id="e0607" src="0.gif" alt="e0607" onclick="play(this.id,6,7)"/></td>
+		<td><img id="e0608" src="0.gif" alt="e0608" onclick="play(this.id,6,8)"/></td>
+		<td><img id="e0609" src="0.gif" alt="e0609" onclick="play(this.id,6,9)"/></td>
+		<td><img id="e0610" src="0.gif" alt="e0610" onclick="play(this.id,6,10)"/></td>
+		<td><img id="e0611" src="0.gif" alt="e0611" onclick="play(this.id,6,11)"/></td>
+		<td><img id="e0612" src="0.gif" alt="e0612" onclick="play(this.id,6,12)"/></td>
+		<td><img id="e0613" src="0.gif" alt="e0613" onclick="play(this.id,6,13)"/></td>
+		<td><img id="e0614" src="0.gif" alt="e0614" onclick="play(this.id,6,14)"/></td>
+		<td><img id="e0615" src="0.gif" alt="e0615" onclick="play(this.id,6,15)"/></td>
+	</tr>	
+
+	<tr>
+		<td><img id="e0701" src="0.gif" alt="e0701" onclick="play(this.id,7,1)"/></td>
+		<td><img id="e0702" src="0.gif" alt="e0702" onclick="play(this.id,7,2)"/></td>
+		<td><img id="e0703" src="0.gif" alt="e0703" onclick="play(this.id,7,3)"/></td>
+		<td><img id="e0704" src="0.gif" alt="e0704" onclick="play(this.id,7,4)"/></td>
+		<td><img id="e0705" src="0.gif" alt="e0705" onclick="play(this.id,7,5)"/></td>
+		<td><img id="e0706" src="0.gif" alt="e0706" onclick="play(this.id,7,6)"/></td>
+		<td><img id="e0707" src="0.gif" alt="e0707" onclick="play(this.id,7,7)"/></td>
+		<td><img id="e0708" src="0.gif" alt="e0708" onclick="play(this.id,7,8)"/></td>
+		<td><img id="e0709" src="0.gif" alt="e0709" onclick="play(this.id,7,9)"/></td>
+		<td><img id="e0710" src="0.gif" alt="e0710" onclick="play(this.id,7,10)"/></td>
+		<td><img id="e0711" src="0.gif" alt="e0711" onclick="play(this.id,7,11)"/></td>
+		<td><img id="e0712" src="0.gif" alt="e0712" onclick="play(this.id,7,12)"/></td>
+		<td><img id="e0713" src="0.gif" alt="e0713" onclick="play(this.id,7,13)"/></td>
+		<td><img id="e0714" src="0.gif" alt="e0714" onclick="play(this.id,7,14)"/></td>
+		<td><img id="e0715" src="0.gif" alt="e0715" onclick="play(this.id,7,15)"/></td>
+	</tr>	
+	<tr>
+		<td><img id="e0801" src="0.gif" alt="e0801" onclick="play(this.id,8,1)"/></td>
+		<td><img id="e0802" src="0.gif" alt="e0802" onclick="play(this.id,8,2)"/></td>
+		<td><img id="e0803" src="0.gif" alt="e0803" onclick="play(this.id,8,3)"/></td>
+		<td><img id="e0804" src="0.gif" alt="e0804" onclick="play(this.id,8,4)"/></td>
+		<td><img id="e0805" src="0.gif" alt="e0805" onclick="play(this.id,8,5)"/></td>
+		<td><img id="e0806" src="0.gif" alt="e0806" onclick="play(this.id,8,6)"/></td>
+		<td><img id="e0807" src="0.gif" alt="e0807" onclick="play(this.id,8,7)"/></td>
+		<td><img id="e0808" src="0.gif" alt="e0808" onclick="play(this.id,8,8)"/></td>
+		<td><img id="e0809" src="0.gif" alt="e0809" onclick="play(this.id,8,9)"/></td>
+		<td><img id="e0810" src="0.gif" alt="e0810" onclick="play(this.id,8,10)"/></td>
+		<td><img id="e0811" src="0.gif" alt="e0811" onclick="play(this.id,8,11)"/></td>
+		<td><img id="e0812" src="0.gif" alt="e0812" onclick="play(this.id,8,12)"/></td>
+		<td><img id="e0813" src="0.gif" alt="e0813" onclick="play(this.id,8,13)"/></td>
+		<td><img id="e0814" src="0.gif" alt="e0814" onclick="play(this.id,8,14)"/></td>
+		<td><img id="e0815" src="0.gif" alt="e0815" onclick="play(this.id,8,15)"/></td>
+	</tr>	
+	<tr>
+		<td><img id="e0901" src="0.gif" alt="e0901" onclick="play(this.id,9,1)"/></td>
+		<td><img id="e0902" src="0.gif" alt="e0902" onclick="play(this.id,9,2)"/></td>
+		<td><img id="e0903" src="0.gif" alt="e0903" onclick="play(this.id,9,3)"/></td>
+		<td><img id="e0904" src="0.gif" alt="e0904" onclick="play(this.id,9,4)"/></td>
+		<td><img id="e0905" src="0.gif" alt="e0905" onclick="play(this.id,9,5)"/></td>
+		<td><img id="e0906" src="0.gif" alt="e0906" onclick="play(this.id,9,6)"/></td>
+		<td><img id="e0907" src="0.gif" alt="e0907" onclick="play(this.id,9,7)"/></td>
+		<td><img id="e0908" src="0.gif" alt="e0908" onclick="play(this.id,9,8)"/></td>
+		<td><img id="e0909" src="0.gif" alt="e0909" onclick="play(this.id,9,9)"/></td>
+		<td><img id="e0910" src="0.gif" alt="e0910" onclick="play(this.id,9,10)"/></td>
+		<td><img id="e0911" src="0.gif" alt="e0911" onclick="play(this.id,9,11)"/></td>
+		<td><img id="e0912" src="0.gif" alt="e0912" onclick="play(this.id,9,12)"/></td>
+		<td><img id="e0913" src="0.gif" alt="e0913" onclick="play(this.id,9,13)"/></td>
+		<td><img id="e0914" src="0.gif" alt="e0914" onclick="play(this.id,9,14)"/></td>
+		<td><img id="e0915" src="0.gif" alt="e0915" onclick="play(this.id,9,15)"/></td>
+	</tr>	
+	<tr>
+		<td><img id="e1001" src="0.gif" alt="e1001" onclick="play(this.id,10,1)"/></td>
+		<td><img id="e1002" src="0.gif" alt="e1002" onclick="play(this.id,10,2)"/></td>
+		<td><img id="e1003" src="0.gif" alt="e1003" onclick="play(this.id,10,3)"/></td>
+		<td><img id="e1004" src="0.gif" alt="e1004" onclick="play(this.id,10,4)"/></td>
+		<td><img id="e1005" src="0.gif" alt="e1005" onclick="play(this.id,10,5)"/></td>
+		<td><img id="e1006" src="0.gif" alt="e1006" onclick="play(this.id,10,6)"/></td>
+		<td><img id="e1007" src="0.gif" alt="e1007" onclick="play(this.id,10,7)"/></td>
+		<td><img id="e1008" src="0.gif" alt="e1008" onclick="play(this.id,10,8)"/></td>
+		<td><img id="e1009" src="0.gif" alt="e1009" onclick="play(this.id,10,9)"/></td>
+		<td><img id="e1010" src="0.gif" alt="e1010" onclick="play(this.id,10,10)"/></td>
+		<td><img id="e1011" src="0.gif" alt="e1011" onclick="play(this.id,10,11)"/></td>
+		<td><img id="e1012" src="0.gif" alt="e1012" onclick="play(this.id,10,12)"/></td>
+		<td><img id="e1013" src="0.gif" alt="e1013" onclick="play(this.id,10,13)"/></td>
+		<td><img id="e1014" src="0.gif" alt="e1014" onclick="play(this.id,10,14)"/></td>
+		<td><img id="e1015" src="0.gif" alt="e1015" onclick="play(this.id,10,15)"/></td>
+	</tr>	
+	<tr>
+		<td><img id="e1101" src="0.gif" alt="e1101" onclick="play(this.id,11,1)"/></td>
+		<td><img id="e1102" src="0.gif" alt="e1102" onclick="play(this.id,11,2)"/></td>
+		<td><img id="e1103" src="0.gif" alt="e1103" onclick="play(this.id,11,3)"/></td>
+		<td><img id="e1104" src="0.gif" alt="e1104" onclick="play(this.id,11,4)"/></td>
+		<td><img id="e1105" src="0.gif" alt="e1105" onclick="play(this.id,11,5)"/></td>
+		<td><img id="e1106" src="0.gif" alt="e1106" onclick="play(this.id,11,6)"/></td>
+		<td><img id="e1107" src="0.gif" alt="e1107" onclick="play(this.id,11,7)"/></td>
+		<td><img id="e1108" src="0.gif" alt="e1108" onclick="play(this.id,11,8)"/></td>
+		<td><img id="e1109" src="0.gif" alt="e1109" onclick="play(this.id,11,9)"/></td>
+		<td><img id="e1110" src="0.gif" alt="e1110" onclick="play(this.id,11,10)"/></td>
+		<td><img id="e1111" src="0.gif" alt="e1111" onclick="play(this.id,11,11)"/></td>
+		<td><img id="e1112" src="0.gif" alt="e1112" onclick="play(this.id,11,12)"/></td>
+		<td><img id="e1113" src="0.gif" alt="e1113" onclick="play(this.id,11,13)"/></td>
+		<td><img id="e1114" src="0.gif" alt="e1114" onclick="play(this.id,11,14)"/></td>
+		<td><img id="e1115" src="0.gif" alt="e1115" onclick="play(this.id,11,15)"/></td>
+	</tr>	
+	<tr>
+		<td><img id="e1201" src="0.gif" alt="e1201" onclick="play(this.id,12,1)"/></td>
+		<td><img id="e1202" src="0.gif" alt="e1202" onclick="play(this.id,12,2)"/></td>
+		<td><img id="e1203" src="0.gif" alt="e1203" onclick="play(this.id,12,3)"/></td>
+		<td><img id="e1204" src="0.gif" alt="e1204" onclick="play(this.id,12,4)"/></td>
+		<td><img id="e1205" src="0.gif" alt="e1205" onclick="play(this.id,12,5)"/></td>
+		<td><img id="e1206" src="0.gif" alt="e1206" onclick="play(this.id,12,6)"/></td>
+		<td><img id="e1207" src="0.gif" alt="e1207" onclick="play(this.id,12,7)"/></td>
+		<td><img id="e1208" src="0.gif" alt="e1208" onclick="play(this.id,12,8)"/></td>
+		<td><img id="e1209" src="0.gif" alt="e1209" onclick="play(this.id,12,9)"/></td>
+		<td><img id="e1210" src="0.gif" alt="e1210" onclick="play(this.id,12,10)"/></td>
+		<td><img id="e1211" src="0.gif" alt="e1211" onclick="play(this.id,12,11)"/></td>
+		<td><img id="e1212" src="0.gif" alt="e1212" onclick="play(this.id,12,12)"/></td>
+		<td><img id="e1213" src="0.gif" alt="e1213" onclick="play(this.id,12,13)"/></td>
+		<td><img id="e1214" src="0.gif" alt="e1214" onclick="play(this.id,12,14)"/></td>
+		<td><img id="e1215" src="0.gif" alt="e1215" onclick="play(this.id,12,15)"/></td>
+	</tr>	
+	<tr>
+		<td><img id="e1301" src="0.gif" alt="e1301" onclick="play(this.id,13,1)"/></td>
+		<td><img id="e1302" src="0.gif" alt="e1302" onclick="play(this.id,13,2)"/></td>
+		<td><img id="e1303" src="0.gif" alt="e1303" onclick="play(this.id,13,3)"/></td>
+		<td><img id="e1304" src="0.gif" alt="e1304" onclick="play(this.id,13,4)"/></td>
+		<td><img id="e1305" src="0.gif" alt="e1305" onclick="play(this.id,13,5)"/></td>
+		<td><img id="e1306" src="0.gif" alt="e1306" onclick="play(this.id,13,6)"/></td>
+		<td><img id="e1307" src="0.gif" alt="e1307" onclick="play(this.id,13,7)"/></td>
+		<td><img id="e1308" src="0.gif" alt="e1308" onclick="play(this.id,13,8)"/></td>
+		<td><img id="e1309" src="0.gif" alt="e1309" onclick="play(this.id,13,9)"/></td>
+		<td><img id="e1310" src="0.gif" alt="e1310" onclick="play(this.id,13,10)"/></td>
+		<td><img id="e1311" src="0.gif" alt="e1311" onclick="play(this.id,13,11)"/></td>
+		<td><img id="e1312" src="0.gif" alt="e1312" onclick="play(this.id,13,12)"/></td>
+		<td><img id="e1313" src="0.gif" alt="e1313" onclick="play(this.id,13,13)"/></td>
+		<td><img id="e1314" src="0.gif" alt="e1314" onclick="play(this.id,13,14)"/></td>
+		<td><img id="e1315" src="0.gif" alt="e1315" onclick="play(this.id,13,15)"/></td>
+	</tr>	
+	<tr>
+		<td><img id="e1401" src="0.gif" alt="e1401" onclick="play(this.id,14,1)"/></td>
+		<td><img id="e1402" src="0.gif" alt="e1402" onclick="play(this.id,14,2)"/></td>
+		<td><img id="e1403" src="0.gif" alt="e1403" onclick="play(this.id,14,3)"/></td>
+		<td><img id="e1404" src="0.gif" alt="e1404" onclick="play(this.id,14,4)"/></td>
+		<td><img id="e1405" src="0.gif" alt="e1405" onclick="play(this.id,14,5)"/></td>
+		<td><img id="e1406" src="0.gif" alt="e1406" onclick="play(this.id,14,6)"/></td>
+		<td><img id="e1407" src="0.gif" alt="e1407" onclick="play(this.id,14,7)"/></td>
+		<td><img id="e1408" src="0.gif" alt="e1408" onclick="play(this.id,14,8)"/></td>
+		<td><img id="e1409" src="0.gif" alt="e1409" onclick="play(this.id,14,9)"/></td>
+		<td><img id="e1410" src="0.gif" alt="e1410" onclick="play(this.id,14,10)"/></td>
+		<td><img id="e1411" src="0.gif" alt="e1411" onclick="play(this.id,14,11)"/></td>
+		<td><img id="e1412" src="0.gif" alt="e1412" onclick="play(this.id,14,12)"/></td>
+		<td><img id="e1413" src="0.gif" alt="e1413" onclick="play(this.id,14,13)"/></td>
+		<td><img id="e1414" src="0.gif" alt="e1414" onclick="play(this.id,14,14)"/></td>
+		<td><img id="e1415" src="0.gif" alt="e1415" onclick="play(this.id,14,15)"/></td>
+	</tr>	
+	<tr>
+		<td><img id="e1501" src="0.gif" alt="e1501" onclick="play(this.id,15,1)"/></td>
+		<td><img id="e1502" src="0.gif" alt="e1502" onclick="play(this.id,15,2)"/></td>
+		<td><img id="e1503" src="0.gif" alt="e1503" onclick="play(this.id,15,3)"/></td>
+		<td><img id="e1504" src="0.gif" alt="e1504" onclick="play(this.id,15,4)"/></td>
+		<td><img id="e1505" src="0.gif" alt="e1505" onclick="play(this.id,15,5)"/></td>
+		<td><img id="e1506" src="0.gif" alt="e1506" onclick="play(this.id,15,6)"/></td>
+		<td><img id="e1507" src="0.gif" alt="e1507" onclick="play(this.id,15,7)"/></td>
+		<td><img id="e1508" src="0.gif" alt="e1508" onclick="play(this.id,15,8)"/></td>
+		<td><img id="e1509" src="0.gif" alt="e1509" onclick="play(this.id,15,9)"/></td>
+		<td><img id="e1510" src="0.gif" alt="e1510" onclick="play(this.id,15,10)"/></td>
+		<td><img id="e1511" src="0.gif" alt="e1511" onclick="play(this.id,15,11)"/></td>
+		<td><img id="e1512" src="0.gif" alt="e1512" onclick="play(this.id,15,12)"/></td>
+		<td><img id="e1513" src="0.gif" alt="e1513" onclick="play(this.id,15,13)"/></td>
+		<td><img id="e1514" src="0.gif" alt="e1514" onclick="play(this.id,15,14)"/></td>
+		<td><img id="e1515" src="0.gif" alt="e1515" onclick="play(this.id,15,15)"/></td>
+	</tr>	
+
+
+	</table>
+
+
+<script type="text/javascript" src="gomoku.js"></script>
+
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
