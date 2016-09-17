@@ -1,0 +1,110 @@
+body  {  	
+	margin: 0px;  	
+	 
+	}
+
+
+#header{
+	width:1300px;
+	height: 100px;
+	margin-top: -20px;
+	background-color: lightgrey;
+	position: fixed;
+
+	
+}
+
+#logo{
+	float: left;
+	background-color: ;
+	margin-left:380px;
+	padding-left: 30px;
+	padding-bottom: 20px;
+	background-color:;			; 
+
+}
+
+#texto{
+	
+	float: right;
+	background-color:;
+	margin-right: 450px;
+	padding-top: 15px;
+	padding-bottom: 5px;
+}
+
+img{
+		
+	background-repeat: no-repeat;
+	width: 100px;  
+	height: 50px;  
+	padding-top: 35px;
+
+}
+
+
+#menulateralesq{
+	background-color: ;
+	float:left;
+	margin-top: 15px; 
+	width: 20%;
+	height: 100%;
+	
+}
+
+#menu{
+
+	text-align:center;
+	padding-top: 90px;
+	list-style: none;
+
+}
+.item{
+
+	background-color: #40E0D0;
+	width: 80%;
+	height: 30px;
+	padding-top: 20px;
+	margin-bottom: 30px;
+	border-style: solid 5px;
+
+
+	
+}
+
+#conteudo{
+	float:left;
+	margin-top: 80px;
+	padding-top: 30px;
+	padding-left: 2%;
+	padding-right: 2%;
+	background-color: ;
+	width: 51%;
+	height: 100%;
+	
+}
+
+
+
+
+#lateraldireita{
+	background-color: ;
+	float: left;	
+	width: 25%;
+	height:100%;
+	padding-top: 120px;
+
+	
+}
+#informaçoes{
+	margin-top: 1px;
+	margin-left: 30px;
+	padding-top: 25px;
+	padding-bottom: 20px;
+	padding-left: 25px;
+	padding-right: 15px;
+	width: 200px;
+	background-color:#40E0D0; 
+	border-style: 5px solid;
+	
+}
